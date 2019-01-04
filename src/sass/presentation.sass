@@ -1,0 +1,81 @@
+.presentation 
+	padding-top: 235px
+	padding-bottom: 200px
+	position: relative
+	height: 50vh
+	background: url(../img/presentation/presentation-bg.jpg) center no-repeat 
+	background-size: cover 
+	background-attachment: fixed
+	z-index: 1
+	&::before
+		width: 100%
+		height: 100%
+		position: absolute
+		content: ''
+		background-color: rgba(17, 17, 17, 0.7)
+		background-size: cover 
+		top: 0
+		left: 0
+		z-index: -1
+	&-container 
+		display: flex
+		flex-direction: column
+		align-items: center
+	&-video 
+		border-radius: 50%
+		position: relative
+		transition: all 0.7s
+		cursor: pointer
+		& img 
+			position: relative
+			top: 2px
+			width: 100%
+			height: 100%	
+		&::before 
+			content: ''
+			position: absolute
+			z-index: 3
+			width: 70px
+			height: 70px
+			top: 16px
+			left: 15px
+			background: url(../img/presentation/icon-circle.png) 
+			transition: all 0.8s
+		&::after		
+			content: ''
+			position: absolute
+			z-index: 3
+			width: 70px
+			height: 70px
+			top: 16px
+			left: 15px
+			background: url(../img/presentation/icon-play.png) 
+			transition: all 0.7s
+		&:hover 
+			background-color: #998675
+			&::before
+				transform: rotate(300deg)		
+			&::after 
+				transform: scale(1.2)		
+	&-text 
+		margin-top: 40px
+		color: #ffffff
+		text-align: center
+		& h1 
+			font-family: Raleway
+			font-size: 1.8em	
+			font-weight: 500
+		& p 
+			max-width: 550px
+			font-family: Montserrat
+			font-size: 1em
+			font-weight: 300
+			padding-top: 30px
+			padding-bottom: 40px
+		& small	
+			color: #c7b299
+			font-family: Montserrat
+			font-size: 0.8em
+			font-weight: 400
+
+

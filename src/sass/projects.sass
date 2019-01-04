@@ -1,0 +1,120 @@
+.projects 
+	padding-top: 80px
+	padding-bottom: 80px
+	min-height: 1000px
+	&-wrapper 
+		display: flex
+		flex-direction: column
+		align-items: center
+	&-heading 
+		text-align: center
+		& h1 
+			color: #555555
+			font-family: "Raleway"
+			font-size: 1.875em
+			font-weight: 400		
+		& p 
+			padding-top: 24px
+			color: #8c8c8c
+			font-family: Montserrat
+			font-size: 1em
+			font-weight: 300
+			line-height: 28px	
+			max-width: 750px
+	&-filters
+		display: flex	
+		justify-content: center
+		margin-top: 40px	
+		&-element 
+			margin-left: 10px
+			margin-right: 10px
+			padding: 10px 21px
+			border-radius: 3px
+			border: 1px solid #ebebeb
+			color: #8c8c8c
+			font-family: Montserrat
+			font-size: 0.8em
+			font-weight: 300
+			transition: all 0.7s
+			&:hover 
+				cursor: pointer
+				background-color: #e2d1c0
+			&-active
+				background-color: #998675
+				color: #ffffff
+	&-container
+		margin-top: 40px
+		display: flex
+		justify-content: space-between
+		flex-direction: row
+		flex-wrap: wrap
+		&-element
+			display: none
+			padding-bottom: 30px
+			position: relative
+			&:hover 
+				cursor: pointer
+				& .projects-conatiner-element__image
+					&:before 
+						display: block
+				&	.projects-conatiner-element__text
+					background-color: #362f2d
+					&:before 
+						border-color: #362f2d transparent
+						transform: rotate(180deg)
+					& h1  
+						color: #fff
+					& p 
+						color: #c7b299				
+	.projects-conatiner-element__image
+		height: auto
+		top: 3px
+		position: relative
+		transition: all 0.7s
+		&:before 
+			content: ""
+			background: rgba(17, 17, 17, 0.7) 
+			opacity: 0.7
+			top: 0
+			left: 0
+			bottom: 0
+			right: 0
+			position: absolute
+			z-index: 2
+			display: none
+
+	.projects-conatiner-element__text
+		height: 100px
+		background-color: #fbfaf8		
+		position: relative	
+		transition: all 0.7s
+		&:before
+			content: ''
+			position: absolute
+			top: -19px
+			left: 20px
+			border-color: #fbfaf8 transparent
+			border-style: solid
+			border-width: 0px 20px 20px 20px
+			height: 0px
+			width: 0px
+			transition: all 0.3s
+		& h1
+			padding-top: 31px
+			padding-left: 28px
+			color: #c7b299
+			font-family: Raleway
+			font-size: 1.2em
+			font-weight: 500
+		& p 
+			padding-top: 14px
+			padding-left: 30px		
+			color: #d1d1d1
+			font-family: Montserrat
+			font-size: 0.8em
+			font-weight: 300
+			line-height: 20px	
+
+
+
+			

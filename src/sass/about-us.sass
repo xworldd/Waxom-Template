@@ -1,0 +1,112 @@
+.about-us
+.features-list
+	margin-top: 80px
+	margin-bottom: 80px
+	display: flex
+	flex-direction: row
+	justify-content: space-around
+	align-items: center
+	&__item
+		text-align: center
+		& img 
+			height: 44px
+		&::after 
+			margin-top: 30px
+			position: absolute
+			content: ''
+			width: 70px
+			height: 3px
+			background-color: #f1eee9
+			margin-left: -35px
+			transition: all 0.3s
+		&:hover 
+			& .features-list__item__heading
+				color: #c7b299
+			&::after 
+				background-color: #c7b299
+		&__heading
+			padding-top: 29px
+			color: #555555
+			font-family: 'Raleway', sans-serif
+			font-size: 1.375rem
+			font-weight: 400
+			transition: all 0.5s
+		&__text
+			padding-top: 19px
+			color: #8c8c8c
+			font-family: Montserrat , sans-serif
+			font-size: 0.875rem
+			font-weight: 300	
+
+
+.templates
+	padding-top: 83px
+	padding-bottom: 38px
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	align-items: center
+	text-align: center
+	background: #fbfaf8
+	&-heading 
+		color: #555555
+		font-family: 'Raleway', sans-serif
+		font-size: 1.875rem
+		font-weight: 400
+		max-width: 757px
+		&__text 
+			padding-top: 25px
+			color: #8c8c8c
+			font-family: Montserrat , sans-serif
+			font-size: 1rem
+			font-weight: 300
+	&-showcase 
+		display: flex
+		flex-direction: row
+		justify-content: center
+		align-items: center
+		max-width: 100vw
+		margin-top: 80px
+		margin-left: auto
+		margin-right: auto
+		&__browser
+			&-left
+				position: relative
+				z-index: 1
+				bottom: 0
+				transition: 0.5s
+				box-shadow: none
+				& img 
+					width: 100%
+					height: auto
+				&:hover 
+					animation: 0.3s ease rollover
+					box-shadow: 0px 0px 15px 15px rgba(183,181,181,0.4)
+					z-index: 3
+					bottom: 20px
+			&-center
+				position: absolute
+				z-index: 2
+				transition: 0.5s
+				&:hover 
+					box-shadow: 0px 0px 15px 15px rgba(183,181,181,0.4)
+				& img 
+					width: 100%
+					height: auto	
+			&-right
+				position: relative
+				z-index: 1
+				bottom: 0
+				transition: 0.5s
+				& img 
+					width: 100%
+					height: auto
+				&:hover 
+					animation: 0.3s ease rollover
+					box-shadow: 0px 0px 15px 15px rgba(183,181,181,0.4)
+					z-index: 3
+					bottom: 20px
+
+.temp-styling 
+	display: none
+

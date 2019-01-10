@@ -1,3 +1,4 @@
+// Navigation bar script
 $(document).ready(function() {
     var link = $('.menu-mobile-link')
     var link_active = $('.menu-mobile-link_active')
@@ -14,6 +15,7 @@ $(document).ready(function() {
         menu.toggleClass("menu-mobile_active");
     });
 
+	// mixItUp plugin initialization
     function mixItUp() {
         $("#container").mixItUp({
 
@@ -34,9 +36,10 @@ $(document).ready(function() {
 
     mixItUp();
 
+	// Hide/Show content button script
     var moreBtn = $('.projects-btn')
     
-    var element = 6; // - количество отображаемых новостей
+    var element = 6; 
     hideElement = "Show Less";
     showElement = "Show More";
 
@@ -56,5 +59,33 @@ $(document).ready(function() {
         $(".projects-btn").text( showElement );
       }
     });
+	// Spincrement plugin initialization 
+
+	var show = true;
+	var countbox = ".stats-content";
+	$(window).on("scroll load resize", function(){
+
+		if(!show) return false;
+
+		var w_top = $(window).scrollTop();
+		var e_top = $(".stats").offset().top;
+
+		var w_height = $(window).height();
+		var d_height = $(document).height();
+
+		var e_height = $(".stats").outerHeight();
+
+		console.log(w_top + "/" + e_top);
+
+		if(w_top >= e_top || w_height + w_top == d_height || e_height + e_top < w_height){
+			$(".spincrement").spincrement({
+				thousandSeparator: "",
+				duration: 2000,
+			});
+
+			show = false;
+		}
+	});
+
 
 });

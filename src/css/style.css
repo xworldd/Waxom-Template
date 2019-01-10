@@ -59,6 +59,7 @@
   font-family: Montserrat , sans-serif;
   font-size: 0.875rem;
   font-weight: 300;
+  line-height: 24px;
 }
 
 .templates {
@@ -95,6 +96,7 @@
   font-family: Montserrat , sans-serif;
   font-size: 1rem;
   font-weight: 300;
+  line-height: 28px;
 }
 
 .templates-showcase {
@@ -209,7 +211,7 @@
 
 .eyecather-text {
   color: #ffffff;
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-size: 28px;
   font-weight: 400;
 }
@@ -222,7 +224,7 @@
 .eyecather-text p:last-child {
   padding-top: 8px;
   color: #615855;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 18px;
   font-weight: 300;
 }
@@ -374,6 +376,10 @@
     padding-left: 15px;
     padding-right: 15px;
   }
+
+  .stats-wrapper {
+    padding: 0px 20px 0px 20px;
+  }
 }
 
 @media (max-width: 990px) {
@@ -390,6 +396,42 @@
     display: block;
     width: 100%;
     height: auto;
+  }
+
+  .opportunities {
+    padding-bottom: 70px;
+  }
+
+  .opportunities-image img {
+    width: 100%;
+  }
+
+  .opportunities-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .opportunities-content {
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .opportunities-heading p {
+    line-height: 20px;
+  }
+
+  .opportunities ul li::before {
+    left: -25px;
+  }
+
+  .opportunities ul li:hover {
+    -webkit-transform: none;
+    transform: none;
   }
 }
 
@@ -431,12 +473,34 @@
     font-size: 1em;
   }
 
+  .stats-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .stats-element {
+    margin-top: 50px;
+  }
+
+  .stats-element span {
+    padding-top: 15px;
+  }
+
+  .stats-element__under-line {
+    margin-top: 20px;
+  }
+
   .templates-heading {
     margin-top: 10px;
   }
 
   .eyecather {
-    min-height: 200px;
+    min-height: 230px;
   }
 
   .eyecather-wrapper {
@@ -513,6 +577,18 @@
 
   .eyecather p:last-child {
     font-size: 1em;
+  }
+
+  .projects-conatiner-element__image img {
+    max-width: 100%;
+  }
+
+  .presentation {
+    height: 35vh;
+  }
+
+  .stats-wrapper {
+    padding: 0px;
   }
 }
 
@@ -660,6 +736,97 @@
   background-color: rgba(255, 255, 255, 0.5);
   color: #000;
 }
+.opportunities {
+  padding-top: 79px;
+  background-color: #fbfaf8;
+}
+
+.opportunities-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.opportunities-image {
+  position: relative;
+  height: 615px;
+  margin-bottom: -3px;
+}
+
+.opportunities-image img {
+  width: 100%;
+  height: auto;
+}
+
+.opportunities-content {
+  margin-top: 115px;
+}
+
+.opportunities-heading h1 {
+  color: #555555;
+  font-family: Raleway, sans-serif;
+  font-size: 1.8em;
+  font-weight: 400;
+}
+
+.opportunities-heading p {
+  padding-top: 40px;
+  max-width: 650px;
+  color: #8c8c8c;
+  font-family: Montserrat, sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 28px;
+}
+
+.opportunities-list {
+  padding-top: 20px;
+  padding-left: 50px;
+}
+
+.opportunities-list ul {
+  color: #8c8c8c;
+  font-family: Montserrat, sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+}
+
+.opportunities-list ul li {
+  position: relative;
+  padding-top: 20px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.opportunities-list ul li::before {
+  content: '';
+  position: absolute;
+  left: -35px;
+  top: 17px;
+  width: 21px;
+  height: 21px;
+  background-image: url("../img/opportunities/pre-list.png");
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+}
+
+.opportunities-list ul li:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.opportunities-list ul li:hover::before {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
 .presentation {
   padding-top: 235px;
   padding-bottom: 200px;
@@ -683,7 +850,7 @@
   z-index: -1;
 }
 
-.presentation-container {
+.presentation-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -758,23 +925,24 @@
 }
 
 .presentation-text h1 {
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-size: 1.8em;
   font-weight: 500;
 }
 
 .presentation-text p {
   max-width: 550px;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 1em;
   font-weight: 300;
   padding-top: 30px;
   padding-bottom: 40px;
+  line-height: 28px;
 }
 
 .presentation-text small {
   color: #c7b299;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 0.8em;
   font-weight: 400;
 }
@@ -947,7 +1115,7 @@
   padding-top: 31px;
   padding-left: 28px;
   color: #c7b299;
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-size: 1.2em;
   font-weight: 500;
 }
@@ -956,10 +1124,69 @@
   padding-top: 14px;
   padding-left: 30px;
   color: #d1d1d1;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 0.8em;
   font-weight: 300;
   line-height: 20px;
+}
+.stats {
+  padding-top: 70px;
+  padding-bottom: 60px;
+  background-color: #f4f5f8;
+  background-image: -webkit-gradient(linear, left top, right top, from(#211b19), to(#4e3427));
+  background-image: linear-gradient(to right, #211b19 0%, #4e3427 100%);
+}
+
+.stats-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.stats-element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: Montserrat, sans-serif;
+}
+
+.stats-element span {
+  padding-top: 30px;
+  font-size: 3em;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.stats-element p {
+  padding-top: 20px;
+  color: #c7b299;
+  font-size: 0.8em;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.stats-element__under-line {
+  margin-top: 30px;
+  width: 30px;
+  height: 2px;
+  background-color: #ffffff;
 }
 .wrapper {
   margin-right: auto;
@@ -1161,6 +1388,7 @@ button:focus {
   font-family: Montserrat , sans-serif;
   font-size: 0.875rem;
   font-weight: 300;
+  line-height: 24px;
 }
 
 .templates {
@@ -1197,6 +1425,7 @@ button:focus {
   font-family: Montserrat , sans-serif;
   font-size: 1rem;
   font-weight: 300;
+  line-height: 28px;
 }
 
 .templates-showcase {
@@ -1312,7 +1541,7 @@ button:focus {
 
 .eyecather-text {
   color: #ffffff;
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-size: 28px;
   font-weight: 400;
 }
@@ -1325,7 +1554,7 @@ button:focus {
 .eyecather-text p:last-child {
   padding-top: 8px;
   color: #615855;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 18px;
   font-weight: 300;
 }
@@ -1508,7 +1737,7 @@ button:focus {
   padding-top: 31px;
   padding-left: 28px;
   color: #c7b299;
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-size: 1.2em;
   font-weight: 500;
 }
@@ -1517,7 +1746,7 @@ button:focus {
   padding-top: 14px;
   padding-left: 30px;
   color: #d1d1d1;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 0.8em;
   font-weight: 300;
   line-height: 20px;
@@ -1546,7 +1775,7 @@ button:focus {
   z-index: -1;
 }
 
-.presentation-container {
+.presentation-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1621,25 +1850,178 @@ button:focus {
 }
 
 .presentation-text h1 {
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-size: 1.8em;
   font-weight: 500;
 }
 
 .presentation-text p {
   max-width: 550px;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 1em;
   font-weight: 300;
   padding-top: 30px;
   padding-bottom: 40px;
+  line-height: 28px;
 }
 
 .presentation-text small {
   color: #c7b299;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 0.8em;
   font-weight: 400;
+}
+
+.opportunities {
+  padding-top: 79px;
+  background-color: #fbfaf8;
+}
+
+.opportunities-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.opportunities-image {
+  position: relative;
+  height: 615px;
+  margin-bottom: -3px;
+}
+
+.opportunities-image img {
+  width: 100%;
+  height: auto;
+}
+
+.opportunities-content {
+  margin-top: 115px;
+}
+
+.opportunities-heading h1 {
+  color: #555555;
+  font-family: Raleway, sans-serif;
+  font-size: 1.8em;
+  font-weight: 400;
+}
+
+.opportunities-heading p {
+  padding-top: 40px;
+  max-width: 650px;
+  color: #8c8c8c;
+  font-family: Montserrat, sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 28px;
+}
+
+.opportunities-list {
+  padding-top: 20px;
+  padding-left: 50px;
+}
+
+.opportunities-list ul {
+  color: #8c8c8c;
+  font-family: Montserrat, sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+}
+
+.opportunities-list ul li {
+  position: relative;
+  padding-top: 20px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.opportunities-list ul li::before {
+  content: '';
+  position: absolute;
+  left: -35px;
+  top: 17px;
+  width: 21px;
+  height: 21px;
+  background-image: url("../img/opportunities/pre-list.png");
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+}
+
+.opportunities-list ul li:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.opportunities-list ul li:hover::before {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.stats {
+  padding-top: 70px;
+  padding-bottom: 60px;
+  background-color: #f4f5f8;
+  background-image: -webkit-gradient(linear, left top, right top, from(#211b19), to(#4e3427));
+  background-image: linear-gradient(to right, #211b19 0%, #4e3427 100%);
+}
+
+.stats-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.stats-element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: Montserrat, sans-serif;
+}
+
+.stats-element span {
+  padding-top: 30px;
+  font-size: 3em;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.stats-element p {
+  padding-top: 20px;
+  color: #c7b299;
+  font-size: 0.8em;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.stats-element__under-line {
+  margin-top: 30px;
+  width: 30px;
+  height: 2px;
+  background-color: #ffffff;
 }
 
 @media (max-width: 1200px) {
@@ -1655,6 +2037,10 @@ button:focus {
   .eyecather-wrapper {
     padding-left: 15px;
     padding-right: 15px;
+  }
+
+  .stats-wrapper {
+    padding: 0px 20px 0px 20px;
   }
 }
 
@@ -1672,6 +2058,42 @@ button:focus {
     display: block;
     width: 100%;
     height: auto;
+  }
+
+  .opportunities {
+    padding-bottom: 70px;
+  }
+
+  .opportunities-image img {
+    width: 100%;
+  }
+
+  .opportunities-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .opportunities-content {
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .opportunities-heading p {
+    line-height: 20px;
+  }
+
+  .opportunities ul li::before {
+    left: -25px;
+  }
+
+  .opportunities ul li:hover {
+    -webkit-transform: none;
+    transform: none;
   }
 }
 
@@ -1713,12 +2135,34 @@ button:focus {
     font-size: 1em;
   }
 
+  .stats-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .stats-element {
+    margin-top: 50px;
+  }
+
+  .stats-element span {
+    padding-top: 15px;
+  }
+
+  .stats-element__under-line {
+    margin-top: 20px;
+  }
+
   .templates-heading {
     margin-top: 10px;
   }
 
   .eyecather {
-    min-height: 200px;
+    min-height: 230px;
   }
 
   .eyecather-wrapper {
@@ -1795,6 +2239,18 @@ button:focus {
 
   .eyecather p:last-child {
     font-size: 1em;
+  }
+
+  .projects-conatiner-element__image img {
+    max-width: 100%;
+  }
+
+  .presentation {
+    height: 35vh;
+  }
+
+  .stats-wrapper {
+    padding: 0px;
   }
 }
 

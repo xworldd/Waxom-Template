@@ -1,0 +1,57 @@
+.opportunities 
+	padding-top: 79px
+	background-color: #fbfaf8
+	&-wrapper
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+	&-image 
+		position: relative
+		height: 615px	
+		margin-bottom: -3px
+		& img 
+			width: 100%
+			height: auto
+	&-content 
+		margin-top: 115px
+	&-heading
+		& h1 
+			color: #555555
+			font-family: Raleway, sans-serif
+			font-size: 1.8em
+			font-weight: 400
+		& p
+			padding-top: 40px
+			max-width: 650px
+			color: #8c8c8c
+			font-family: Montserrat, sans-serif
+			font-size: 1em
+			font-weight: 300
+			line-height: 28px
+	&-list 
+		padding-top: 20px
+		padding-left: 50px
+		& ul 
+			color: #8c8c8c
+			font-family: Montserrat, sans-serif
+			font-size: 1em
+			font-weight: 300	
+			& li
+				position: relative
+				padding-top: 20px
+				transition: all 0.3s
+				&::before 
+					content: ''
+					position: absolute
+					left: -35px
+					top: 17px
+					width: 21px
+					height: 21px
+					background-image: url(../img/opportunities/pre-list.png)	
+					transition: all 0.7s
+				&:hover 
+					cursor: pointer
+					transform: scale(1.1)
+					&::before 
+						transform: rotate(360deg)	
+

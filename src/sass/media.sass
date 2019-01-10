@@ -7,6 +7,8 @@
 	.eyecather-wrapper 
 		padding-left: 15px
 		padding-right: 15px
+	.stats-wrapper 
+		padding: 0px 20px 0px 20px
 
 @media (max-width: 990px)
 	.wrapper
@@ -17,7 +19,27 @@
 			display: block
 			width: 100%
 			height: auto	
-		
+	.opportunities
+		padding-bottom: 70px
+		&-image img 
+			width: 100% 
+		&-wrapper 
+			flex-direction: column		
+			align-items: center
+		&-content 
+				margin-top: 30px
+				text-align: center	
+		&-heading p 
+			line-height: 20px	
+		&-list
+		& ul 
+			& li
+				&::before 
+					left: -25px
+				&:hover
+					transform: none 
+					&::before 
+
 @media (max-width: 799px)
 	.wrapper
 		max-width: 799px
@@ -34,10 +56,21 @@
 			&__text 
 				max-width: 60%	
 				font-size: 1em	
+	.stats 
+		&-wrapper
+			flex-direction: column
+			align-items: center
+		&-element 
+			margin-top: 50px
+			& span 
+				padding-top: 15px
+			&__under-line
+				margin-top: 20px
+
 	.templates-heading 
 		margin-top: 10px		
 	.eyecather
-		min-height: 200px
+		min-height: 230px
 		&-wrapper
 			flex-direction: column
 			align-items: center
@@ -77,8 +110,16 @@
 		&-text 
 			font-size: 1.5em
 		& p:last-child 
-			font-size: 1em	
+			font-size: 1em
 
+	.projects-conatiner-element__image img 
+		max-width: 100%	
+
+	.presentation 
+		height: 35vh		
+		
+	.stats-wrapper 
+		padding: 0px 
 @media (min-width: 1200px)
 	.menu 
 		display: none

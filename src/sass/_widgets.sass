@@ -1,0 +1,102 @@
+.widgets 
+	background-color: #191919
+	padding-bottom: 60px
+	&-wrapper 
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+	&-text 
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		padding-top: 80px
+		& p 
+			padding: 30px 0px 30px 0px
+			color: #555555
+			font-family: 'Montserrat', sans-serif
+			font-size: 14px
+			font-weight: 300
+			line-height: 24px	
+			width: 260px
+			max-width: 260px
+		& a 
+			position: relative
+			color: #d1d1d1
+			font-family: 'Montserrat', sans-serif
+			font-size: 14px
+			font-weight: 400	
+			text-decoration: none
+			transition: all 0.7s
+			&:hover 
+				color: #c7b299
+				&::after 
+					transform: rotate(180deg)
+					cursor: default
+			&::after
+				content: ''
+				z-index: 3
+				position: absolute
+				left: 85px
+				top: 3px
+				width: 0
+				height: 0
+				border-top: 4px solid transparent
+				border-bottom: 4px solid transparent 
+				border-left: 5px solid #e2e2e2	 
+				transition: all 0.7s
+
+	&-posts
+		display: flex
+		flex-direction: column
+		& h1 
+			padding-bottom: 33px
+
+	&-twitter
+		display: flex
+		flex-direction: column
+		& h1
+			padding-bottom: 23px
+		& h2 
+			padding-top: 10px	
+		& span 
+			color: #00bff3
+		& a 
+			color: #959595
+			text-decoration: none		
+	&-dribbble
+		padding-top: 107px 
+		min-width: 270px
+		width: 270px
+		& h1 
+			padding-bottom: 26px	
+			color: #ffffff
+			font-family: 'Raleway', sans-serif
+			font-size: 24px
+			font-weight: 700
+
+	.widgets-posts, .widgets-twitter
+		padding: 107px 0px 0px 30px
+		
+	& h1
+		color: #ffffff
+		font-family: 'Raleway', sans-serif
+		font-size: 24px
+		font-weight: 700
+	& h2
+		color: #363636
+		font-family: 'Montserrat', sans-serif
+		font-size: 12px
+		font-weight: 300
+		line-height: 20px 	
+	& p 
+		color: #555555
+		font-family: 'Montserrat', sans-serif
+		font-size: 12px
+		font-weight: 300
+		line-height: 20px		
+		
+.horizintal-line 
+	margin: 18px 0px 18px 0px	
+	width: 85%
+	height: 1px
+	background-color: #252525

@@ -1,24 +1,32 @@
 @media (max-width: 1200px)
-	.header 
+	.wrapper
 		padding-left: 15px
 		padding-right: 15px
+
 	.sm-styling 
 		display: none
+
 	.eyecather-wrapper 
 		padding-left: 15px
 		padding-right: 15px
+
 	.stats-wrapper 
-		padding: 0px 20px 0px 20px
+		padding: 0px 20px 0px 20px 
+
+	.widgets-posts, .widgets-twitter
+		padding: 107px 0px 0px 10px 
 
 @media (max-width: 990px)
 	.wrapper
 		max-width: 992px
+
 	.templates
 		justify-content: space-around
 		&-showcase__sm-image
 			display: block
 			width: 100%
 			height: auto	
+
 	.opportunities
 		padding-bottom: 70px
 		&-image img 
@@ -40,9 +48,36 @@
 					transform: none 
 					&::before 
 
+	.blog-slider-element__text
+		padding-left: 10px !important	
+
+	.brands-wrapper 
+		padding: 100px 0px 100px 0px
+		flex-direction: column
+		justify-content: center
+		& img 
+			padding: 40px 0px 40px 0px
+
+	.widgets
+		&-wrapper 
+			flex-direction: column
+			align-items: center
+			justify-content: center
+			text-align: center		
+		&-text 
+			align-items: center
+		&-posts
+			align-items: center
+		&-twitter
+			align-items: center		
+	
+	.widgets-posts, .widgets-twitter
+		padding: 107px 0px 0px 0px	!important					
+
 @media (max-width: 799px)
 	.wrapper
 		max-width: 799px
+
 	.features-list 
 		flex-direction: column
 		justify-content: space-between
@@ -56,6 +91,7 @@
 			&__text 
 				max-width: 60%	
 				font-size: 1em	
+
 	.stats 
 		&-wrapper
 			flex-direction: column
@@ -69,6 +105,7 @@
 
 	.templates-heading 
 		margin-top: 10px		
+
 	.eyecather
 		min-height: 230px
 		&-wrapper
@@ -95,6 +132,13 @@
 		justify-content: center
 		align-items: center		
 
+	.footer
+		&-wrapper
+			flex-direction: column
+			align-items: center
+		&-info 
+			padding-bottom: 30px		
+
 @media (max-width: 599px) 
 	html
 		font-size: 12px !important
@@ -104,9 +148,12 @@
 
 	.wrapper
 		max-width: 600px
+		padding-right: 5px
+		padding-left: 5px	
 
 	.eyecather
 		&-wrapper
+			padding-bottom: 30px
 		&-text 
 			font-size: 1.5em
 		& p:last-child 
@@ -120,9 +167,23 @@
 		
 	.stats-wrapper 
 		padding: 0px 
+	
+	.footer-info, .footer-authors
+		flex-direction: column
+		align-items: center
+		justify-content: space-between
+		width: 95%	
+		& a 
+			padding-top: 5px
+			padding-bottom: 5px
+
+	.vl 
+		display: none
+
 @media (min-width: 1200px)
 	.menu 
 		display: none
+
 @media (min-width: 991px)
 	.templates-showcase
 		margin-top: 140px
@@ -130,6 +191,8 @@
 			display: none
 	.temp-styling
 		display: block	
+
+
 
 @media (min-width: 991px) and (max-width:1600px) 
 	.eyecather

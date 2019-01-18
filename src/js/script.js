@@ -27,7 +27,6 @@ $(document).ready(function() {
             	activeClass:'projects-filters-element-active'
             },
             animation: {
-            	// enable: false,
             	effects:"fade scale",
             	duration: 800
             }
@@ -60,7 +59,6 @@ $(document).ready(function() {
       }
     });
 	// Spincrement plugin initialization 
-
 	var show = true;
 	var countbox = ".stats-content";
 	$(window).on("scroll load resize", function(){
@@ -69,23 +67,52 @@ $(document).ready(function() {
 
 		var w_top = $(window).scrollTop();
 		var e_top = $(".stats").offset().top;
-
 		var w_height = $(window).height();
 		var d_height = $(document).height();
-
 		var e_height = $(".stats").outerHeight();
 
-		console.log(w_top + "/" + e_top);
-
-		if(w_top >= e_top || w_height + w_top == d_height || e_height + e_top < w_height){
+		if(w_top + 520 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height){
 			$(".spincrement").spincrement({
 				thousandSeparator: "",
 				duration: 2000,
 			});
-
 			show = false;
 		}
 	});
+
+    // Slick-slider initialization 
+
+    $('.blog-slider').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: true,
+        centerMode: true,
+        focusOnSelect: true,
+        autoplay: true,
+        autoplaySpeed: 2500,
+        prevArrow:
+         '<div class="slider-arrow slider-arrow_left"><div>',       
+        nextArrow:
+         '<div class="slider-arrow slider-arrow_right"><div>',
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              arrows: false,
+              centerMode: false,
+              slidesToShow: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              slidesToShow: 1
+            }
+          }
+        ]    
+      });
 
 
 });

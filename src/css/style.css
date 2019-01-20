@@ -578,7 +578,7 @@
   text-transform: uppercase;
 }
 .footer {
-  padding: 45px 0px 45px 0px;
+  padding: 30px 0px 30px 0px;
   background-color: #111111;
 }
 
@@ -1033,8 +1033,13 @@
     font-size: 12px !important;
   }
 
+  .main {
+    height: 600px;
+    background-attachment: none;
+  }
+
   .main-content {
-    margin-top: 170px	!important;
+    margin-top: 90px	!important;
   }
 
   .wrapper {
@@ -1060,7 +1065,12 @@
   }
 
   .presentation {
-    height: 35vh;
+    height: 300px;
+    padding: 130px 0px 160px 0px;
+  }
+
+  .opportunities-image {
+    margin-bottom: -20px;
   }
 
   .stats-wrapper {
@@ -1089,7 +1099,8 @@
   }
 
   .vl {
-    display: none;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
   }
 }
 
@@ -3037,7 +3048,7 @@ button:focus {
 }
 
 .footer {
-  padding: 45px 0px 45px 0px;
+  padding: 30px 0px 30px 0px;
   background-color: #111111;
 }
 
@@ -3368,8 +3379,13 @@ button:focus {
     font-size: 12px !important;
   }
 
+  .main {
+    height: 600px;
+    background-attachment: none;
+  }
+
   .main-content {
-    margin-top: 170px	!important;
+    margin-top: 90px	!important;
   }
 
   .wrapper {
@@ -3395,7 +3411,12 @@ button:focus {
   }
 
   .presentation {
-    height: 35vh;
+    height: 300px;
+    padding: 130px 0px 160px 0px;
+  }
+
+  .opportunities-image {
+    margin-bottom: -20px;
   }
 
   .stats-wrapper {
@@ -3424,7 +3445,8 @@ button:focus {
   }
 
   .vl {
-    display: none;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
   }
 }
 
